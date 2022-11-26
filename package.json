@@ -28,11 +28,11 @@
   "lint-staged": {
     "*.{js,ts,html}": [
       "eslint --fix",
-      "prettier --write --config .prettierrc.json"
+      "prettier --write --config .prettierrc"
     ],
     "*.{css,scss}": [
-      "prettier --write --config .prettierrc.json",
-      "stylelint --fix --config .stylelintrc.json"
+      "prettier --write --config .prettierrc",
+      "stylelint --fix --config .stylelintrc"
     ]
   },
   "eslintConfig": {
