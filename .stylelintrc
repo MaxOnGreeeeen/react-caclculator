@@ -1,0 +1,11 @@
+{
+  "plugins": ["stylelint-order"],
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-property-sort-order-smacss"],
+  "rules": {
+    "selector-max-compound-selectors": 10,
+    "max-nesting-depth": 10,
+    "no-empty-source": null,
+    "selector-class-pattern": null,
+    "font-family-no-missing-generic-family-keyword": null
+  }
+}
