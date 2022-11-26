@@ -1,0 +1,16 @@
+@use "sass:list";
+@import "variables";
+
+/**
+  Удаление единицы
+ */
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+/**
+  Перевод в относительные единицы rem
+ */
+@function rem($pxValue) {
+  @return #{strip-unit($pxValue) / strip-unit($html-font-size)}rem;
+}

@@ -12,5 +12,7 @@
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
   },
-  "stylelint.validate": ["css", "scss"]
+  "stylelint.validate": ["css", "scss"],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }
