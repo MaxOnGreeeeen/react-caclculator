@@ -4,15 +4,19 @@ import { ButtonTypes } from "shared/enums/ButtonTypes";
 import c from "./button.module.scss";
 
 interface IProps extends HTMLAttributes<HTMLButtonElement> {
-  onClick(): void;
-  children?: string;
+  click(value: string): void;
+  children: string;
   disabled?: boolean;
   type?: ButtonTypes;
   className?: string;
 }
 
 const Button = (props: IProps) => {
-  const { onClick, children, disabled, type, className } = props;
+  const { click, children, disabled, type, className } = props;
+
+  const onButtonClick = (): void => {
+    click(children);
+  };
 
   const buttonClassName = (): string => {
     switch (type) {
@@ -24,7 +28,7 @@ const Button = (props: IProps) => {
     }
   };
   return (
-    <button type="button" disabled={disabled} onClick={onClick} className={buttonClassName()}>
+    <button type="button" disabled={disabled} onClick={onButtonClick} className={buttonClassName()}>
       {children}
     </button>
   );

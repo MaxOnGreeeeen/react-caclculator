@@ -15,12 +15,19 @@
   box-shadow: 0 5px 10px 6px rgb(32 31 37 / 47%);
 
   .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 40%;
-    padding: rem(30) rem(20) 0 rem(20);
+    padding: rem(30) rem(20) rem(10) rem(20);
     overflow: hidden;
     background-color: inherit;
 
-    &__controls {
+    &__result {
+      max-width: 166px;
+      color: var(--typo-primary-color);
+      font-size: 16px;
+      text-align: end;
     }
   }
 

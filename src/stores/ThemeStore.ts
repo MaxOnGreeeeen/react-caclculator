@@ -3,9 +3,6 @@ import { themeKeyAttributeValue } from "shared/consts/theme";
 import { ThemeVariants, ThemeVariantsType } from "shared/enums/ThemeVariants";
 
 class ThemeStore {
-  /**
-   * Значение поля текущей темы
-   */
   public currentThemeVal?: ThemeVariantsType;
 
   public switchChecked = false;
