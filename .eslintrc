@@ -73,6 +73,7 @@
         "namedComponents": "arrow-function",
         "unnamedComponents": "arrow-function",
     }],
+    "no-shadow": "off",
     "import/no-unresolved": 0,
     "import/extensions": 0,
     "prettier/prettier": ["warn", { "singleQuote": false }],

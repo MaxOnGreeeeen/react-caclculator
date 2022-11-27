@@ -8,6 +8,8 @@ class ThemeStore {
    */
   public currentThemeVal?: ThemeVariantsType;
 
+  public switchChecked = false;
+
   constructor() {
     makeAutoObservable(this, undefined, {
       autoBind: true,
@@ -21,6 +23,8 @@ class ThemeStore {
   }
 
   public changeTheme() {
+    this.switchChecked = !this.switchChecked;
+
     const themeValue = this.currentThemeVal === ThemeVariants.Dark;
     this.currentThemeVal = themeValue ? ThemeVariants.Light : ThemeVariants.Dark;
     document.body.setAttribute(themeKeyAttributeValue, this.currentThemeVal);

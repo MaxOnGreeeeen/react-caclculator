@@ -1,16 +1,27 @@
-@use "sass:list";
-@import "variables";
+@use "sass:map";
+@use "sass:math";
+@import "src/theme/variables";
 
-/**
-  Удаление единицы
- */
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
+@function em($pixel, $context: $default-font-size) {
+  @if unitless($pixel) {
+    $pixel: $pixel * 1px;
+  }
+
+  @if unitless($context) {
+    $context: $context * 1px;
+  }
+
+  @return math.div($pixel, $context) * 1em;
 }
 
-/**
-  Перевод в относительные единицы rem
- */
-@function rem($pxValue) {
-  @return #{strip-unit($pxValue) / strip-unit($html-font-size)}rem;
+@function rem($pixel, $context: $default-font-size) {
+  @if unitless($pixel) {
+    $pixel: $pixel * 1px;
+  }
+
+  @if unitless($context) {
+    $context: $context * 1px;
+  }
+
+  @return math.div($pixel, $context) * 1rem;
 }
