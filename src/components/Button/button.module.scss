@@ -1,0 +1,16 @@
+.button {
+  box-sizing: border-box;
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: var(--button-background-color);
+  color: var(--typo-primary-color);
+  cursor: pointer;
+  user-select: none;
+
+  &__rounded {
+    border-radius: 50%;
+  }
+}

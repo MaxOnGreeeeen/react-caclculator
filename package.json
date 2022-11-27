@@ -10,6 +10,8 @@
     "@types/node": "^16.18.3",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
+    "mobx": "^6.7.0",
+    "mobx-react-lite": "^3.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -22,7 +24,18 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --debug src/",
-    "lint:write": "eslint --debug src/ --fix"
+    "lint:write": "eslint --debug src/ --fix",
+    "prettier": "prettier  — write src/**/*.js"
+  },
+  "lint-staged": {
+    "*.{js,ts,html}": [
+      "eslint --fix",
+      "prettier --write --config .prettierrc"
+    ],
+    "*.{css,scss}": [
+      "prettier --write --config .prettierrc",
+      "stylelint --fix --config .stylelintrc"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -52,11 +65,14 @@
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.4",
     "prettier": "^2.8.0",
     "sass": "^1.56.1",
     "stylelint": "^14.15.0",
     "stylelint-config-property-sort-order-smacss": "^9.0.0",
     "stylelint-config-standard-scss": "^6.1.0",
-    "stylelint-order": "^5.0.0"
+    "stylelint-order": "^5.0.0",
+    "typescript-plugin-css-modules": "^3.4.0"
   }
 }

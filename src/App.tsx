@@ -1,7 +1,13 @@
+import Calculator from "modules/Calculator/Calculator";
+
 import "./App.scss";
 
-function App() {
-  return <div className="App" />;
-}
+const App = () => {
+  return (
+    <div className="app">
+      <Calculator />
+    </div>
+  );
+};
 
 export default App;

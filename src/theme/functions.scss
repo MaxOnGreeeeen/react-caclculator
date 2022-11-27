@@ -1,0 +1,27 @@
+@use "sass:map";
+@use "sass:math";
+@import "src/theme/variables";
+
+@function em($pixel, $context: $default-font-size) {
+  @if unitless($pixel) {
+    $pixel: $pixel * 1px;
+  }
+
+  @if unitless($context) {
+    $context: $context * 1px;
+  }
+
+  @return math.div($pixel, $context) * 1em;
+}
+
+@function rem($pixel, $context: $default-font-size) {
+  @if unitless($pixel) {
+    $pixel: $pixel * 1px;
+  }
+
+  @if unitless($context) {
+    $context: $context * 1px;
+  }
+
+  @return math.div($pixel, $context) * 1rem;
+}

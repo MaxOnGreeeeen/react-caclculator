@@ -1,0 +1,31 @@
+@import "src/theme/functions";
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 226px;
+  height: 24px;
+  padding: rem(22) rem(10) rem(22) rem(10);
+  transition: outline-color linear 0.2s;
+  border: solid grey 1px;
+  border-radius: rem(5);
+  background-color: var(--bg-primary-main);
+  color: var(--typo-primary-dark);
+
+  &__multiLine {
+    min-height: rem(200);
+    padding: rem(7);
+    resize: none;
+  }
+
+  &__disabled {
+    border: var(--disabled-primary-main) 1px solid;
+    background-color: rgb(212 194 194 / 40%);
+    color: var(--typo-primary-main);
+    pointer-events: none;
+  }
+
+  &:focus {
+    outline: solid var(--success-secondary-light) 2px;
+  }
+}

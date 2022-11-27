@@ -1,9 +1,11 @@
 {
-  "import/resolver": {
-    "node": {
-      "paths": ["src"]
-    }
-  },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "paths": ["src"]
+            }
+        }
+    },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -42,9 +44,8 @@
     "space-before-function-paren": 0,
 
     "max-len": ["error", 100, 2, { "ignoreUrls": true }],
-    "no-console": "error",
+    "no-console": 0,
     "no-alert": "error",
-
     "no-param-reassign": "off",
     "radix": "off",
     "react/require-default-props": "off",
@@ -65,9 +66,18 @@
         }
       }
     ],
+    
+    "react/function-component-definition": [
+    2,
+    {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function",
+    }],
+    "no-shadow": "off",
     "import/no-unresolved": 0,
-    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
-    "prettier/prettier": ["warn", { "singleQuote": false }]
+    "import/extensions": 0,
+    "prettier/prettier": ["warn", { "singleQuote": false }],
+    "import/prefer-default-export": 0
   },
   "overrides": [
     {
